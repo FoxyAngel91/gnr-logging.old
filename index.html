@@ -169,7 +169,7 @@
                 <input type="hidden" name="_subject" value="Someone wrote you a testimonial!">
                 <input type="text" name="_honey" value="" style="display:none">
                 <input type="hidden" name="_confirmation" value="<b>Thank you!</b> We have received your message and will get back to you asap.">
-                <input type="hidden" name="_after" value="http://localhost:63342/gnrlogging/src/index.html?testimonial_received#testimonials">
+                <input type="hidden" name="_after" value="http://gnr-logging.ca/index.html?testimonial_received#testimonials">
                 <textarea title="message" name="testimonial_message" required rows="4" id="test_mess"></textarea><br>
                 <input id="test_name" placeholder="Name" name="testimonial_name" required type="text"/>
                 <input name="Approve" id="approve" type="hidden" value=""/>
@@ -184,7 +184,7 @@
                 <input type="hidden" name="_replyto" value="angele1991@hotmail.com">
                 <input type="text" name="_honey" value="" style="display:none">
                 <input type="hidden" name="_confirmation" value="<b>Thank you!</b> We have received your message and will get back to you asap.">
-                <input type="hidden" name="_after" value="http://localhost:63342/gnrlogging/src/index.html?contact_received#contact_us">
+                <input type="hidden" name="_after" value="http://gnr-logging.ca/index.html?contact_received#contact_us">
                 <div class="one_hundred">
                     <input id="name" placeholder="Name" name="contact_name" required type="text"/>
                     <input type="text" placeholder="Number" name="contact_phone" id="phone"/><br>
@@ -249,7 +249,7 @@
             var encoded_name = encodeURI(test_name).replace(/[!'()]/g).replace(/\*/g, "%2A");
             var encoded_test = encodeURI(testimonial).replace(/[!'()]/g).replace(/\*/g, "%2A");
 
-            $('#approve').val('<a href="http://localhost:63342/gnrlogging/src/testimonial_forward.html?test_name=' + encoded_name + '&test_mess=' + encoded_test +'">Click Me</a>');
+            $('#approve').val('<a href="http://gnr-logging.ca/testimonial_forward.html?test_name=' + encoded_name + '&test_mess=' + encoded_test +'">Click Me</a>');
         });
 
         $('#nav_slider_img, #nav_close').on('click', function () {
