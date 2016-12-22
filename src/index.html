@@ -249,7 +249,7 @@
             var encoded_name = encodeURI(test_name).replace(/[!'()]/g).replace(/\*/g, "%2A");
             var encoded_test = encodeURI(testimonial).replace(/[!'()]/g).replace(/\*/g, "%2A");
 
-            $('#approve').val('<a href="http://localhost:63342/gnrlogging/src/testimonial_forward.html?test_name=' + encoded_name + '&test_mess=' + encoded_test +'">Click Me</a>');
+            $('#approve').val('<a href="gnr-logging.ca/testimonial_forward.html?test_name=' + encoded_name + '&test_mess=' + encoded_test +'">Click Me</a>');
         });
 
         $('#nav_slider_img, #nav_close').on('click', function () {
