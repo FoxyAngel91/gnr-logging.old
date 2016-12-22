@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+
+        <form style="display:none" id="testimonial_form" action="http://mailthis.to/gnr-logging" method="post" enctype="multipart/form-data" >
+            <input type="hidden" name="_subject" value="Dad approved a testimonial!">
+            <input type="text" name="_honey" value="" style="display:none">
+            <input type="hidden" name="_after" value="http://localhost:63342/gnrlogging/src/index.html">
+            <input type="hidden" name="_confirmation" value="<b>Thanks!</b> I'll add it to the site soon.">
+            <textarea title="message" name="testimonial_message" required rows="4" id="test_mess"></textarea><br>
+            <input id="test_name" placeholder="Name" name="testimonial_name" required type="text"/>
+            <input type="submit" id="submit" value="Submit"/>
+        </form>
+
+        <script>
+            $(document).on('ready', function(){
+                var search_string = top.location.search;
+                search_string = search_string.replace('?', '');
+                var search_params = search_string.split('&');
+                for (var i = 0; i < search_params.length; i++) {
+                    var key_value_pair = search_params[i].split('=');
+                    $('#' + key_value_pair[0]).val(key_value_pair[1]);
+                }
+                $('#submit').click();
+            });
+        </script>
+    </body>
+</html>
+
