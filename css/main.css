@@ -43,6 +43,7 @@ time, mark, audio, video {
 
 body {
     line-height: 1;
+    background-color: transparent;
 /*     background-image: url('../img/birchbackground.jpg'); */
     color:beige;
 /*     background-repeat: no-repeat;
