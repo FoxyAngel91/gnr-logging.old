@@ -43,11 +43,28 @@ time, mark, audio, video {
 
 body {
     line-height: 1;
-    background-image: url('../img/birchbackground.jpg');
+/*     background-image: url('../img/birchbackground.jpg'); */
     color:beige;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+/*     background-repeat: no-repeat;
+    background-attachment: fixed; */
     /*font-family: "Road_Rage", "Times";*/
+}
+body:before {
+  content: "";
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  background-image: url('../img/birchbackground.jpg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 ol, ul {
